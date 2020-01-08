@@ -4,8 +4,6 @@
 // Scrivi anche la posizione della lista in cui il nuovo utente si trova.
 
 // 1.Chiedere il cognome all'utente
-var surnameUser = prompt('Inserisci il tuo cognome');
-console.log(surnameUser);
 var listUsers = [
   'Rossi',
   'Alessi',
@@ -14,14 +12,21 @@ var listUsers = [
   'Conte'];
 console.log(listUsers);
 
+var newUser = prompt('Inserisci il tuo cognome');
+console.log(newUser);
+
 // 2.Inserire il cognome in un array
-listUsers.push(surnameUser);
+listUsers.push(newUser);
+// listUsers.sort();
+
 
 // 3.Ordinare alfabeticamente e stampare
 for (var i = 0; i < listUsers.length; i++){
   console.log(listUsers[i]);
-var listContent = document.getElementById('surname_list').innerHTML;
-document.getElementById('surname_list').innerHTML = listContent + '<li>' + listUsers[i] + '</li>';
-console.log(listContent);
+  var listContent = document.getElementById('surname_list').innerHTML;
+  document.getElementById('surname_list').innerHTML = listContent + '<li>' + listUsers[i] + '</li>';
+  console.log(listContent);
 }
+listUsers.sort();
+
 // 4.La nuova posizione nella lista
